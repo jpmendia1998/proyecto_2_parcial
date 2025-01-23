@@ -33,7 +33,7 @@ menu = st.sidebar.radio(
     "",
     [
         "Inicio \U0001f3e0",
-        "Visualización de Producción \U0001f702",
+        "Visualización de Producción 📊",
         "Potencial de produccion\U0001f4a7",
         "Análisis nodal para flujo monofásico \u2699\ufe0f",
     ]
@@ -50,7 +50,7 @@ if menu == "Inicio \U0001f3e0":
     Las funcionalidades incluyen:
 
     - Visualización de datos de producción de pozos.
-    - Cálculo del índice de productividad (\( J \)) y caudales (\( Q \)).
+    - Cálculo del índice de productividad (J) y caudales (Q).
     - Estimación del flujo absoluto abierto (AOF).
     - Análisis nodal para flujo monofásico.
 
