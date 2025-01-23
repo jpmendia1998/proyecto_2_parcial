@@ -47,7 +47,8 @@ if menu == "Inicio \U0001f3e0":
     st.title("Bienvenidos a la aplicación Oil & Gas")
     st.write(""" 
     Esta aplicación está diseñada para optimizar el análisis de datos de producción y realizar cálculos avanzados en ingeniería de petróleo. 
-    Las funcionalidades incluyen:
+   
+    funcionalidades:
 
     - Visualización de datos de producción de pozos.
     - Cálculo del índice de productividad (J) y caudales (Q).
