@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from funciones.produc import j, j_darcy, q_darcy, aof, Qb, qo_darcy, IPR_curve_methods
 
-
 # Ruta al archivo Excel
 file_path = "Data/Volve production data.xlsx"
 
@@ -47,7 +46,7 @@ if menu == "Inicio \U0001f3e0":
     st.title("Bienvenidos a la aplicación Oil & Gas")
     st.write(""" 
     Esta aplicación está diseñada para optimizar el análisis de datos de producción y realizar cálculos avanzados en ingeniería de petróleo. 
-   
+
     funcionalidades:
 
     - Visualización de datos de producción de pozos.
@@ -55,15 +54,15 @@ if menu == "Inicio \U0001f3e0":
     - Estimación del flujo absoluto abierto (AOF).
     - Análisis nodal para flujo monofásico.
 
-    Todo en una interfaz intuitiva y fácil de usar.
     """)
 
     # Mostrar una foto de los fundadores debajo
     founders_image_path = "Data/fundadores.jpg"  # Ruta a la foto de los fundadores
     st.subheader("Conoce a los fundadores")
-    st.image(founders_image_path, caption="Equipo fundador de la aplicación: Jean Pierre Mendia y Joel Alcivar", use_column_width=True)
+    st.image(founders_image_path, caption="Equipo fundador de la aplicación: Jean Pierre Mendia y Joel Alcivar",
+             use_column_width=True)
 
-elif menu == "Visualización de Producción \U0001f702":
+elif menu == "Visualización de Producción 📊":
     st.title("Visualización de Produccion")
     try:
         excel_data = pd.ExcelFile(file_path)
@@ -121,7 +120,7 @@ elif menu == "Análisis nodal para flujo monofásico \u2699\ufe0f":
         Q_value = q_darcy(ko, h, pr, pwf, s, uo, bo, re, rw, flow_regime)
         st.write(f"El caudal Darcy (Q) es: {Q_value:.2f} [bbl/día]")
 
-elif menu == "Potencial de  produccion\U0001f4a7":
+elif menu == "Potencial de produccion\U0001f4a7":
     st.title("Potencial de Producción")
 
     st.write("Ingresa los parámetros necesarios para calcular el potencial de producción:")
@@ -160,7 +159,8 @@ elif menu == "Potencial de  produccion\U0001f4a7":
 
     pwf_values = []
     for i in range(num_pwf):
-        pwf_input = st.number_input(f"Ingresa el valor de Pwf #{i+1} (psia):", min_value=0.0, max_value=pr, key=f"pwf_{i}")
+        pwf_input = st.number_input(f"Ingresa el valor de Pwf #{i + 1} (psia):", min_value=0.0, max_value=pr,
+                                    key=f"pwf_{i}")
         pwf_values.append(pwf_input)
 
     if st.button("Calcular Qo y generar curva IPR"):
@@ -178,3 +178,12 @@ elif menu == "Potencial de  produccion\U0001f4a7":
 
         except Exception as e:
             st.error(f"Error en el cálculo de Qo o en la generación de la curva IPR: {e}")
+
+# Generar archivo requirements.txt
+with open('requirements.txt', 'w') as f:
+    f.write("streamlit\n")
+    f.write("pandas\n")
+    f.write("plotly\n")
+    f.write("Pillow\n")
+    f.write("numpy\n")
+    f.write("matplotlib\n")

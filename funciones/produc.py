@@ -162,9 +162,9 @@ def j_darcy(ko, h, bo, uo, re, rw, s, flow_regime='seudocontinuo'):
 
 def q_darcy(ko,h,pr,pwf,s,uo,bo,re,rw, flow_regime='seudocontinuo'):
     if flow_regime == 'seudocontinuo':
-        Q_darcy=(ko*h*(pr-pwf))/(141,2*bo*(np.log(re / rw)-0,75 + s))
+        Q_darcy=(ko*h*(pr-pwf))/(141.2*bo*(np.log(re / rw)-0.75 + s))
     elif flow_regime == 'continuo':
-        Q_darcy=(ko*h*(pr-pwf))/(141,2*bo*(np.log(re / rw) + s))
+        Q_darcy=(ko*h*(pr-pwf))/(141.2*bo*(np.log(re / rw) + s))
     return Q_darcy
 
 
