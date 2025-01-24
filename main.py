@@ -186,3 +186,4 @@ with open('requirements.txt', 'w') as f:
     f.write("plotly\n")
     f.write("numpy\n")
     f.write("matplotlib\n")
+    f.write("scipy\n")
