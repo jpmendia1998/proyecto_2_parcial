@@ -55,7 +55,6 @@ if menu == "Inicio \U0001f3e0":
     - Estimación del flujo absoluto abierto (AOF).
     - Análisis nodal para flujo monofásico.
 
-    Todo en una interfaz intuitiva y fácil de usar.
     """)
 
     # Mostrar una foto de los fundadores debajo
@@ -63,7 +62,7 @@ if menu == "Inicio \U0001f3e0":
     st.subheader("Conoce a los fundadores")
     st.image(founders_image_path, caption="Equipo fundador de la aplicación: Jean Pierre Mendia y Joel Alcivar", use_column_width=True)
 
-elif menu == "Visualización de Producción \U0001f702":
+elif menu == "Visualización de Producción 📊":
     st.title("Visualización de Produccion")
     try:
         excel_data = pd.ExcelFile(file_path)
@@ -121,7 +120,7 @@ elif menu == "Análisis nodal para flujo monofásico \u2699\ufe0f":
         Q_value = q_darcy(ko, h, pr, pwf, s, uo, bo, re, rw, flow_regime)
         st.write(f"El caudal Darcy (Q) es: {Q_value:.2f} [bbl/día]")
 
-elif menu == "Potencial de  produccion\U0001f4a7":
+elif menu == "Potencial de produccion\U0001f4a7":
     st.title("Potencial de Producción")
 
     st.write("Ingresa los parámetros necesarios para calcular el potencial de producción:")
