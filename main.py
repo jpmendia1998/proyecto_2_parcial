@@ -178,3 +178,12 @@ elif menu == "Potencial de produccion\U0001f4a7":
 
         except Exception as e:
             st.error(f"Error en el cálculo de Qo o en la generación de la curva IPR: {e}")
+
+# Generar archivo requirements.txt
+with open('requirements.txt', 'w') as f:
+    f.write("streamlit\n")
+    f.write("pandas\n")
+    f.write("plotly\n")
+    f.write("Pillow\n")
+    f.write("numpy\n")
+    f.write("matplotlib\n")
