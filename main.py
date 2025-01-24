@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from funciones.produc import j, j_darcy, q_darcy, aof, Qb, qo_darcy, IPR_curve_methods
 
-
 # Ruta al archivo Excel
 file_path = "Data/Volve production data.xlsx"
 
@@ -47,7 +46,7 @@ if menu == "Inicio \U0001f3e0":
     st.title("Bienvenidos a la aplicación Oil & Gas")
     st.write(""" 
     Esta aplicación está diseñada para optimizar el análisis de datos de producción y realizar cálculos avanzados en ingeniería de petróleo. 
-   
+
     funcionalidades:
 
     - Visualización de datos de producción de pozos.
@@ -60,7 +59,8 @@ if menu == "Inicio \U0001f3e0":
     # Mostrar una foto de los fundadores debajo
     founders_image_path = "Data/fundadores.jpg"  # Ruta a la foto de los fundadores
     st.subheader("Conoce a los fundadores")
-    st.image(founders_image_path, caption="Equipo fundador de la aplicación: Jean Pierre Mendia y Joel Alcivar", use_column_width=True)
+    st.image(founders_image_path, caption="Equipo fundador de la aplicación: Jean Pierre Mendia y Joel Alcivar",
+             use_column_width=True)
 
 elif menu == "Visualización de Producción 📊":
     st.title("Visualización de Produccion")
@@ -159,7 +159,8 @@ elif menu == "Potencial de produccion\U0001f4a7":
 
     pwf_values = []
     for i in range(num_pwf):
-        pwf_input = st.number_input(f"Ingresa el valor de Pwf #{i+1} (psia):", min_value=0.0, max_value=pr, key=f"pwf_{i}")
+        pwf_input = st.number_input(f"Ingresa el valor de Pwf #{i + 1} (psia):", min_value=0.0, max_value=pr,
+                                    key=f"pwf_{i}")
         pwf_values.append(pwf_input)
 
     if st.button("Calcular Qo y generar curva IPR"):
