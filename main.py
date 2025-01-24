@@ -58,7 +58,7 @@ if menu == "Inicio \U0001f3e0":
 
     # Mostrar una foto de los fundadores debajo
     founders_image_path = "Data/fundadores.jpg"  # Ruta a la foto de los fundadores
-    st.subheader("Conoce a los fundadores")
+    st.subheader("Fundadores")
     st.image(founders_image_path, caption="Equipo fundador de la aplicación: Jean Pierre Mendia y Joel Alcivar",
              use_column_width=True)
 
