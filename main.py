@@ -184,6 +184,5 @@ with open('requirements.txt', 'w') as f:
     f.write("streamlit\n")
     f.write("pandas\n")
     f.write("plotly\n")
-    f.write("Pillow\n")
     f.write("numpy\n")
     f.write("matplotlib\n")
